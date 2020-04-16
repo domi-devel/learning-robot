@@ -6,5 +6,6 @@ setup(name='learning_robot',
       version='1.0',
       description='Self-learning robot with machine learning methods',
       author='Students',
-      packages=['learning_robot', 'learning_robot.robot_interfaces', 'learning_robot.machine_learning' ],
+      package_dir = {'': 'learning_robot'},
+      packages=['robotcontrol', 'robotinterfaces', 'machinelearning' ],
      )

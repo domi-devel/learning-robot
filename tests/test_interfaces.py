@@ -1,6 +1,6 @@
 import pytest
-from  learning_robot.robot_interfaces import i2c_devices
+from robotinterfaces import hello_world
 
 def test_hello_world():
-    response = i2c_devices.hello_world()
+    response = hello_world()
     assert 'Hello world' == response
