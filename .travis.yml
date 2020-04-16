@@ -8,7 +8,7 @@ before_install:
     - pip install codecov
 install:
     - pip install -r requirements.txt
-    - pip install .
+    - pip install -e .
 script: pytest --cov=robotcontrol --cov=machinelearning --cov=robotinterfaces # run tests
 after_success:
     - codecov # submit coverage
