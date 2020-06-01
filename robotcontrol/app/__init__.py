@@ -1,5 +1,5 @@
 from flask import Flask
-from ..config import config
+from .config import config
 
 # config module is available here
 # https://github.com/miguelgrinberg/flasky/issues/154

@@ -1,8 +1,10 @@
 import click
-from .app import create_app
-# Import dependencies here
-# For example, if you were using SQLAlchem
-# from app import create_app, db
+
+# Absolute import in case the relative import fails
+try:
+    from .app import create_app
+except ImportError:
+    from app import create_app
 
 
 @click.group()
@@ -12,18 +14,18 @@ def cli():
 
 @click.command()
 @click.option(
-    '--env', default='development',
-    help='Environment to use while running server',
-    type=click.STRING
+    "--env",
+    default="development",
+    help="Environment to use while running server",
+    type=click.STRING,
 )
 @click.option(
-    '--port', default=5000,
-    help='Port to use while running server',
-    type=click.STRING
+    "--port", default=5000, help="Port to use while running server", type=click.STRING
 )
 def runserver(env, port):
     app = create_app(env)
     app.run(port=port)
+
 
 # Add other commands here
 # Eg.
