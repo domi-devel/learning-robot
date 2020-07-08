@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <script src="static/js/buttonhandler.js"></script>
+</head>
+
+<body>
+    <div style="text-align:left;display:inline-block;min-width:340px;">
+        <div id="title" style="text-align:center;">
+            <h1>Robot UI</h1>
+        </div>
+        <div style="text-align:center;">Choose the slot to load or go back to the main menu. Each slot represents a saved model</div>
+        <div id="buttons">
+            <table style="width:70%">
+                <tr>
+                    <td>
+                        <button class="blue" onclick="submitBtn('load1')">Slot 1</button>
+                    </td>
+                    <td>
+                        <button class="blue" onclick="submitBtn('load2')">Slot 2</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="blue" onclick="submitBtn('load3')">Slot 3</button>
+                    </td>
+                    <td>
+                        <button class="blue" onclick="submitBtn('load4')">Slot 4</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="blue" onclick="submitBtn('load5')">Slot 5</button>
+                    </td>
+                    <td>
+                        <form action="/" method="GET">
+                            <button class="yellow">Back to Menu</button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

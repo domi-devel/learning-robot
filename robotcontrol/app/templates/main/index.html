@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <script src="static/js/buttonhandler.js"></script>
+</head>
+
 <body>
-<div id="title">
-<h1>Robot UI</h1>
-</div>
-<div id="buttons">
-<input type="button" id="btn" onclick="submitBtn('start')" value="Start"/>
-<input type="button" id="btn" onclick="submitBtn('stop')" value="Stop"/>
-</div>
- <script src="static/js/buttonhandler.js"></script>
+    <div style="text-align:left;display:inline-block;min-width:340px;">
+        <div id="title" style="text-align:center;">
+            <h1>Robot UI</h1>
+        </div>
+        <div style="text-align:center;">Welcome!</div>
+        <div style="text-align:center;">To learn a robot how to „walk“ with Machine Learning there are data for training needed.
+            Here you can
+            choose commands for the robot:</div>
+        <div id="buttons">
+            <table style="width:70%">
+                <tr>
+                    <td>
+                        <form action="load" method="GET">
+                            <button class="blue">Load Data</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="save" method="GET">
+                            <button class="blue">Save Data</button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="blue" onclick="submitBtn('idle')">Idle</button>
+                    </td>
+                    <td>
+                        <button class="blue" onclick="submitBtn('work')">Work</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="blue" onclick="submitBtn('train')">Training Mode</button>
+                    </td>
+                    <td>
+                        <button class="red" onclick="submitBtn('shutdown')">Shutdown</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
+
 </html>
