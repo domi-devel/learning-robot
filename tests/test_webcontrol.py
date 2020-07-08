@@ -36,9 +36,9 @@ def test_404():
 def test_post():
     app = create_app('testing')
     client = app.test_client()
-    rv = client.post('/post', data='start')
+    rv = client.post('/post', data='train')
     assert rv.data == b'OK'
-    rv = client.post('/post', data='stop'.encode())
+    rv = client.post('/post', data='idle'.encode())
     assert rv.data == b'OK'
     rv = client.post('/post', data='no')
     assert rv.data != b'OK'
